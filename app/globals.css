@@ -1,0 +1,238 @@
+/* La Casino: собственные стили лендинга, без сторонних библиотек */
+
+:root {
+  --lq7x-felt: #0e2b24;
+  --lq7x-felt-deep: #0a211c;
+  --lq7x-cream: #f2ede3;
+  --lq7x-gold: #c9a227;
+  --lq7x-sage: #9db8ae;
+  --lq7x-line: rgba(201, 162, 39, 0.28);
+  --lq7x-serif: Georgia, 'Times New Roman', Times, serif;
+  --lq7x-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--lq7x-felt);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--lq7x-felt);
+  color: var(--lq7x-cream);
+  font-family: var(--lq7x-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--lq7x-gold);
+  color: var(--lq7x-felt-deep);
+}
+
+.lq7x-shell {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+.lq7x-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.lq7x-mark {
+  margin: 0;
+  font-family: var(--lq7x-serif);
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  color: var(--lq7x-gold);
+}
+
+.lq7x-age {
+  margin: 0;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--lq7x-line);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  color: var(--lq7x-sage);
+  white-space: nowrap;
+}
+
+.lq7x-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+
+.lq7x-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lq7x-h1 {
+  margin: 0;
+  font-family: var(--lq7x-serif);
+  font-size: clamp(1.75rem, 6.5vw, 2.75rem);
+  line-height: 1.15;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.lq7x-lead {
+  margin: 0;
+  font-size: 1.0625rem;
+  text-wrap: pretty;
+}
+
+.lq7x-sect {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.lq7x-h2 {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-family: var(--lq7x-serif);
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.lq7x-h2::before {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.5rem;
+  background: var(--lq7x-gold);
+  transform: rotate(45deg);
+}
+
+.lq7x-p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.lq7x-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lq7x-list li::marker {
+  color: var(--lq7x-gold);
+}
+
+.lq7x-fig {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lq7x-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--lq7x-line);
+  border-radius: 0.5rem;
+  background: var(--lq7x-felt-deep);
+}
+
+.lq7x-cap {
+  font-size: 0.875rem;
+  color: var(--lq7x-sage);
+}
+
+.lq7x-foot {
+  border-top: 1px solid var(--lq7x-line);
+  padding-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.lq7x-foottitle {
+  margin: 0;
+  font-family: var(--lq7x-serif);
+  font-size: 1.0625rem;
+  color: var(--lq7x-gold);
+}
+
+.lq7x-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.lq7x-tag a {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--lq7x-line);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  color: var(--lq7x-sage);
+  text-decoration: none;
+}
+
+.lq7x-tag a:hover {
+  background: var(--lq7x-gold);
+  border-color: var(--lq7x-gold);
+  color: var(--lq7x-felt-deep);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--lq7x-gold);
+  outline-offset: 2px;
+}
+
+.lq7x-note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--lq7x-sage);
+}
+
+@media (min-width: 700px) {
+  .lq7x-shell {
+    padding: 2.25rem 1.5rem 4.5rem;
+    gap: 3.25rem;
+  }
+
+  .lq7x-main {
+    gap: 3.25rem;
+  }
+
+  .lq7x-lead {
+    font-size: 1.125rem;
+  }
+
+  .lq7x-h2 {
+    font-size: 1.5rem;
+  }
+}
