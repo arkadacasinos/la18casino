@@ -42,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        <meta name="yandex-verification" content="0e0c0472fcc35d91" />
         {/* Дополнительные пользовательские теги вставляйте сюда */}
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ru_RU" />
